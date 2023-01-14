@@ -9,23 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1254b1aa-614f-4607-b279-432746619c52" name="Changes" comment="FtpClient">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/FtpTest_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Ftp_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FtpClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FtpClientTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FileInteractionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/UtilityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/WrongDataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/testing.xml" afterDir="false" />
+    <list default="true" id="1254b1aa-614f-4607-b279-432746619c52" name="Changes" comment="FtpClient finished">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FtpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FtpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FtpClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FtpClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/FileInteractionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FileInteractionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/UtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/UtilityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/WrongDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/WrongDataTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +33,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="a14999a4-776c-4ad3-9a47-ae2f22eed99e" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,14 +54,18 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;TestNG&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Ftp/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Ftp&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Ftp" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -187,8 +185,18 @@
       <workItem from="1673630045757" duration="184000" />
       <workItem from="1673635429008" duration="1459000" />
       <workItem from="1673643562060" duration="1232000" />
-      <workItem from="1673674996092" duration="4331000" />
+      <workItem from="1673674996092" duration="4650000" />
+      <workItem from="1673679961288" duration="333000" />
+      <workItem from="1673686554318" duration="622000" />
     </task>
+    <task id="LOCAL-00001" summary="FtpClient finished">
+      <created>1673679468205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673679468205</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +215,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FtpClient" />
-    <option name="LAST_COMMIT_MESSAGE" value="FtpClient" />
+    <MESSAGE value="FtpClient finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="FtpClient finished" />
   </component>
 </project>

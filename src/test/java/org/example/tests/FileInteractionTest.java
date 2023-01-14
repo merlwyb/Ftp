@@ -22,7 +22,7 @@ public class FileInteractionTest {
 
     //==================================================================================================================
 
-    @Test(description = "Проверка на успешное получение файла")
+    @Test(description = "Checking for successful file receive")
     public void getFile_Test() throws IOException {
         FtpClient.getFileThenMap(ftpStr, TESTFILENAME);
         Files.delete(Paths.get(TESTFILENAME));
@@ -30,7 +30,7 @@ public class FileInteractionTest {
 
     //==================================================================================================================
 
-    @Test(description = "Проверка на успешную загрузку файла")
+    @Test(description = "Checking for successful file upload")
     public void saveFile_Test() throws IOException {
         Map<Integer, String> testMap = new TreeMap<>();
         testMap.put(1, "Ivan");

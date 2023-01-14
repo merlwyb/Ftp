@@ -23,24 +23,24 @@ public class FtpClient {
 
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите логин");
+        System.out.println("Enter username");
         username = scan.next();
-        System.out.println("Введите пароль");
+        System.out.println("Enter password");
         password = scan.next();
-        System.out.println("Введите ip-address");
+        System.out.println("Enter ip-address");
         server = scan.next();
 
 
         try {
             checkConnection(username, password, server, PORT);
-            System.out.println("Успешный логин");
+            System.out.println("Successful login");
         } catch (SocketException | UnknownHostException e) {
-            System.out.println("Неверный адрес сервера");
+            System.out.println("Invalid ip-address");
             e.printStackTrace();
             scan.close();
             System.exit(0);
         } catch (Exception e) {
-            System.out.println("Неверный логин или пароль");
+            System.out.println("Invalid username or password");
             e.printStackTrace();
             scan.close();
             System.exit(0);
@@ -56,34 +56,34 @@ public class FtpClient {
                         printStudentList();
                         break;
                     case "2":
-                        System.out.println("Введите желаемый id для вывода информации");
+                        System.out.println("Enter ID to display the information");
                         printStudentById(scan.nextInt());
                         break;
                     case "3":
-                        System.out.println("Введите имя для добавления:");
+                        System.out.println("Enter a name to add:");
                         addStudent(scan.next());
                         break;
                     case "4":
-                        System.out.println("Введите id для удаления студента:");
+                        System.out.println("Enter ID to delete the student:");
                         removeStudentById(scan.nextInt());
                         break;
                     default:
-                        System.out.println("Нет такого варианта, попробуйте ещё раз");
+                        System.out.println("No such option, try again");
                 }
                 printOptions();
                 option = scan.next();
             }
         } catch (InputMismatchException e) {
-            System.out.println("Введёное значение не является числом: " + e);
+            System.out.println("The entered value is not a number: " + e);
             e.printStackTrace();
         } catch (ConnectException e) {
-            System.out.println("Не удалось подключиться к серверу: " + e);
+            System.out.println("Failed to connect to the server: " + e);
             e.printStackTrace();
         } catch (IOException e) {
-            System.out.println("Ошибка с файлом: " + e);
+            System.out.println("Error with the file: " + e);
             e.printStackTrace();
         } finally {
-            System.out.println("Завершение работы...");
+            System.out.println("Shutdown...");
             scan.close();
         }
     }
@@ -92,7 +92,7 @@ public class FtpClient {
     static void printStudentList() throws IOException {
         Map<Integer, String> studentMap = getFileThenMap(ftpStr, filename);
 
-        System.out.println("Список студентов:");
+        System.out.println("Students list:");
         studentMap.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue())
@@ -105,7 +105,7 @@ public class FtpClient {
     static void printStudentById(int id) throws IOException {
         Map<Integer, String> studentMap = getFileThenMap(ftpStr, filename);
 
-        System.out.println("Студент с id=" + id + ": " + studentMap.getOrDefault(id, "Не существует"));
+        System.out.println("Student with id=" + id + ": " + studentMap.getOrDefault(id, "NOT EXISTS"));
     }
 
     static void addStudent(String name) throws IOException {
@@ -118,7 +118,7 @@ public class FtpClient {
         studentMap.put(id, name);
         saveMapToFileAndSend(studentMap, ftpStr);
 
-        System.out.println("Студент " + name + " был успешно добавлен с id=" + id);
+        System.out.println("Student " + name + " was successfully added with id=" + id);
 
     }
 
@@ -129,7 +129,7 @@ public class FtpClient {
         studentMap.remove(id);
         saveMapToFileAndSend(studentMap, ftpStr);
 
-        System.out.println("Студент с id=" + id + " был успешно удалён");
+        System.out.println("Student with id=" + id + " was successfully deleted");
 
     }
 
@@ -148,12 +148,11 @@ public class FtpClient {
     }
 
     static void printOptions() {
-        System.out.println("\nВыберите действие:");
-        System.out.println("1. Получение списка студентов по имени");
-        System.out.println("2. Получение информации о студенте по id");
-        System.out.println("3. Добавление студента");
-        System.out.println("4. Удаление студента по id");
-        System.out.println("5. Завершение работы");
+        System.out.println("1. Getting a list of students");
+        System.out.println("2. Getting information about a student by id");
+        System.out.println("3. Adding a student");
+        System.out.println("4. Deleting a student by id");
+        System.out.println("5. Shutdown");
     }
 
     public static Map<Integer, String> getFileThenMap(String ftpString, String filename) throws IOException {

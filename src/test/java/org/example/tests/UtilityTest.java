@@ -23,7 +23,7 @@ public class UtilityTest {
         }};
     }
 
-    @Test(description = "Проверка на преобразование JSON в Map", dataProvider = "json string")
+    @Test(description = "Checking for JSON to MAP conversion", dataProvider = "json string")
     public void wrongLogin_Test(String json) {
         Map<Integer, String> expected = new TreeMap<>();
         expected.put(1, "Ivan");
@@ -46,7 +46,7 @@ public class UtilityTest {
         }};
     }
 
-    @Test(description = "Проверка на преобразование Map в JSON", dataProvider = "map")
+    @Test(description = "Checking for MAP to JSON conversion", dataProvider = "map")
     public void wrongPassword_Test(Map<Integer, String> map) {
         String expected = "{\"students\":[{\"id\":1,\"name\":\"Ivan\"},{\"id\":4,\"name\":\"Nikolay\"},{\"id\":22,\"name\":\"Andrew\"}]}";
         Assert.assertEquals(FtpClient.generateStudentJsonString(map), expected);

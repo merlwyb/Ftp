@@ -17,8 +17,8 @@ public class FtpClientTest {
 
         List<String> suites = Lists.newArrayList(suiteFileName);
         testNG.setTestSuites(suites);
-        System.out.println("Запуск тестов...");
+        System.out.println("Running tests...");
         testNG.run();
-        System.out.println("Тесты завершены...");
+        System.out.println("Tests completed...");
     }
 }

@@ -22,7 +22,7 @@ public class WrongDataTest {
         };
     }
 
-    @Test(description = "Проверка на неправильно введённый логин",
+    @Test(description = "Checking for an incorrectly entered username",
             expectedExceptions = {IOException.class, IllegalArgumentException.class},
             dataProvider = "wrong login")
     public void wrongLogin_Test(String username, String password, String ip, int p) throws Exception {
@@ -39,7 +39,7 @@ public class WrongDataTest {
         };
     }
 
-    @Test(description = "Проверка на неправильно введённый пароль",
+    @Test(description = "Checking for an incorrectly entered password",
             expectedExceptions = IOException.class,
             dataProvider = "wrong password")
     public void wrongPassword_Test(String username, String password, String ip, int p) throws Exception {
@@ -56,7 +56,7 @@ public class WrongDataTest {
         };
     }
 
-    @Test(description = "Проверка на неправильно введённый ip-адрес",
+    @Test(description = "Checking for an incorrectly entered ip-address",
             expectedExceptions = {SocketException.class, UnknownHostException.class},
             dataProvider = "wrong server")
     public void wrongServer_Test(String username, String password, String ip, int p) throws Exception {
