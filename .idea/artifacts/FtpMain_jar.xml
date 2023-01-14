@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FtpMain:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FtpMain_jar</output-path>
+    <root id="archive" name="Ftp.jar">
+      <element id="module-output" name="Ftp" />
+    </root>
+  </artifact>
+</component>
